@@ -1,4 +1,4 @@
-export const products = [
+export const PRODUCTS_MOCK = [
   {
     product_id: 51,
     name: "WYNN'S W22710 Антигель для дизельного палива 250мл",

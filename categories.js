@@ -1,4 +1,4 @@
-[
+export const CATEGORIES = [
   {
     category_id: 59,
     name: "Очисники",
