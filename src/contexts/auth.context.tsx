@@ -1,6 +1,13 @@
 import { onAuthStateChangedListener } from "@/utils/firebase/firebase.utils";
 import { User } from "firebase/auth";
-import { Context, ReactNode, createContext, useEffect, useState } from "react";
+import {
+  Context,
+  ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
 interface Props {
   children: ReactNode | string | JSX.Element | JSX.Element[];
@@ -42,3 +49,5 @@ export const AuthProvider = ({ children }: Props) => {
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
+
+export const useAuth = () => useContext(AuthContext);
