@@ -15,7 +15,8 @@ const initContextObject: AuthContextObject = {
 };
 
 const localStorageKey = "currentUser";
-const persistedUserString = localStorage.getItem(localStorageKey);
+const persistedUserString =
+  typeof window !== "undefined" ? localStorage.getItem(localStorageKey) : "";
 
 export const AuthContext: Context<AuthContextObject> =
   createContext(initContextObject);
@@ -29,7 +30,9 @@ export const AuthProvider = ({ children }: Props) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener((user) => {
       setCurrentUser(user);
-      localStorage.setItem(localStorageKey, JSON.stringify(user));
+      if (typeof window !== "undefined") {
+        localStorage.setItem(localStorageKey, JSON.stringify(user));
+      }
     });
 
     return unsubscribe;

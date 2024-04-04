@@ -1,4 +1,4 @@
-import Header from "@/widgets/header/Header";
+"use client";
 
 export default function Home() {
   return <>home page</>;
