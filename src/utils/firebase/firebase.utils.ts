@@ -6,7 +6,14 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDocs,
+  getFirestore,
+  query,
+  writeBatch,
+} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -37,3 +44,27 @@ export const signOutUser = () => signOut(auth);
 export const onAuthStateChangedListener = (
   callback: (user: User | null) => void
 ) => onAuthStateChanged(auth, callback);
+
+export const addCollectionAndDocuments = async (
+  collectionKey: string,
+  objectsToAdd: any[],
+  idField: string
+) => {
+  const collectionRef = collection(db, collectionKey);
+  const batch = writeBatch(db);
+
+  objectsToAdd.forEach((o) => {
+    const docRef = doc(collectionRef, o[idField].toString());
+    batch.set(docRef, o);
+  });
+
+  await batch.commit();
+};
+
+export const getCollectionAndDocuments = async (collectionKey: string) => {
+  const collectionRef = collection(db, collectionKey);
+  const q = query(collectionRef);
+
+  const querySnapshot = await getDocs(q);
+  return querySnapshot.docs.map((d) => d.data());
+};

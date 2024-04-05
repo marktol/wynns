@@ -1,6 +1,6 @@
 export const PRODUCTS_MOCK = [
   {
-    product_id: 51,
+    id: 51,
     name: "WYNN'S W22710 Антигель для дизельного палива 250мл",
     model: "W22710",
     image: "/assets/w22710.png",
@@ -11,7 +11,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 52,
+    id: 52,
     name: "WYNN'S W22795 Антигель для дизельного палива концентрат 1л",
     model: "W22795",
     image: "/assets/w22795.png",
@@ -22,7 +22,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 53,
+    id: 53,
     name: "WYNN'S W22810 Supremium Petrol -Присадка для поліпшення якості бензину 250мл",
     model: "W22810",
     image: "/assets/w22810.png",
@@ -33,7 +33,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 54,
+    id: 54,
     name: "WYNN'S W22911 Supremium Diesel - Присадка для поліпшення якості дизельного палива 250мл",
     model: "W22911",
     image: "/assets/w22911.png",
@@ -44,7 +44,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 55,
+    id: 55,
     name: "WYNN'S W23379 Очисник впускного тракту (аерозоль) 200мл",
     model: "W23379",
     image: "/assets/wy23379.jpg",
@@ -55,7 +55,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 56,
+    id: 56,
     name: "WYNN'S W25241 Очисник дизельної паливної системи 325мл",
     model: "W25241",
     image: "/assets/wy25241.jpg",
@@ -66,7 +66,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 59,
+    id: 59,
     name: "WYNN'S W28393 Засіб для очищення сажових фільтрів дизельних двигунів 500мл",
     model: "W28393",
     image: "/assets/wynnsw28393.png",
@@ -77,7 +77,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 60,
+    id: 60,
     name: "WYNN'S W28510 Присадка для дизельного палива WDA  250мл",
     model: "W28510",
     image: "/assets/w28510.png",
@@ -88,7 +88,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 62,
+    id: 62,
     name: "WYNN'S W29793 Супер очисник паливної системи бензинових двигунів 500мл",
     model: "W29793",
     image: "/assets/wynnsw29793.png",
@@ -99,7 +99,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 63,
+    id: 63,
     name: "WYNN'S W29879 Очисник впускного тракту бензинових двигунів (аерозоль)200мл",
     model: "W29879",
     image: "/assets/wy29879.jpg",
@@ -110,7 +110,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 64,
+    id: 64,
     name: "WYNN'S W30205 Рідина для установки Aircomatic (очищення, дезінфекція) 100мл",
     model: "W30205",
     image: "/assets/wy30205.jpg",
@@ -121,7 +121,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 65,
+    id: 65,
     name: "WYNN'S W31705 Рідина для установки Aircomatic (усунення запахів) 60мл",
     model: "W31705",
     image: "/assets/w31705.png",
@@ -132,7 +132,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 66,
+    id: 66,
     name: "WYNN'S W43863 Присадка для підвищення октанового числа бензину 325мл",
     model: "W43863",
     image: "/assets/w43863.png",
@@ -143,7 +143,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 69,
+    id: 69,
     name: "WYNN'S W45644 Герметик системи охолодження 325мл",
     model: "W45644",
     image: "/assets/wy45644.jpg",
@@ -154,7 +154,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 70,
+    id: 70,
     name: "WYNN'S W45944 Промивка системи охолодження 325мл",
     model: "W45944",
     image: "/assets/wy45944.jpg",
@@ -165,7 +165,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 71,
+    id: 71,
     name: "WYNN'S W46754 Присадка в дизельне паливо 325мл",
     model: "W46754",
     image: "/assets/w46754.png",
@@ -176,7 +176,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 72,
+    id: 72,
     name: "WYNN'S W47244 Промивка масляної системи 325мл",
     model: "W47244",
     image: "/assets/w47244.png",
@@ -187,7 +187,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 77,
+    id: 77,
     name: "WYNN'S W51272 Промивка двигуна (системи змащування) 325мл",
     model: "W51272",
     image: "/assets/wynnsw51272.png",
@@ -198,7 +198,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 80,
+    id: 80,
     name: "WYNN'S W51668 Очисник інжектора для дизельних двигунів 325мл",
     model: "W51668",
     image: "/assets/w51668.png",
@@ -209,7 +209,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 81,
+    id: 81,
     name: "WYNN'S W52579 Силіконове мастило (аерозоль) 500мл",
     model: "W52579",
     image: "/assets/wy52579.jpg",
@@ -220,7 +220,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 82,
+    id: 82,
     name: "WYNN'S W54179 Очисник карбюратора аерозоль 500мл",
     model: "W54179",
     image: "/assets/wy54179.jpg",
@@ -231,7 +231,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 83,
+    id: 83,
     name: "WYNN'S W55872 Герметик системи охолодження (стоп-теча радіатора)325мл",
     model: "W55872",
     image: "/assets/wynnsw5587211111111111.jpg",
@@ -242,7 +242,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 84,
+    id: 84,
     name: "WYNN'S W55972 Очисник форсунок (інжекторів) бензинових двигунів 325мл",
     model: "W55972",
     image: "/assets/wynnsw55972.jpg",
@@ -253,7 +253,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 85,
+    id: 85,
     name: "WYNN'S W56064 Промивка радіатора 325мл",
     model: "W56064",
     image: "/assets/w56064.png",
@@ -264,7 +264,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 86,
+    id: 86,
     name: "WYNN'S W56479 Багатофункціональне мастило водовідштовхувальне, проникаюче (аерозоль) 500мл",
     model: "W56479",
     image: "/assets/w564791.jpg",
@@ -275,7 +275,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 88,
+    id: 88,
     name: "WYNN'S W59406 H.P.L.S.Transmission Treatment (+ Стоп протікання)125мл",
     model: "W59406",
     image: "/assets/wy59406.jpg",
@@ -286,7 +286,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 89,
+    id: 89,
     name: "WYNN'S W61354 Присадка для м'якого очищення паливної системи бензинових двигунів 325мл",
     model: "W61354",
     image: "/assets/vvvvvvvvvvv.png",
@@ -297,7 +297,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 90,
+    id: 90,
     name: "WYNN'S W61479 Очисник гальм і зчеплення (аерозоль) 500мл",
     model: "W61479",
     image: "/assets/w61479.png",
@@ -308,7 +308,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 91,
+    id: 91,
     name: "WYNN'S W64401 Рідина (промивка) для установки TranServe 325мл",
     model: "W64401",
     image: "/assets/automatic_transmission_flush_325_w64401_564513910425.jpg",
@@ -319,7 +319,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 92,
+    id: 92,
     name: "WYNN'S W64503 Присадка для зупинки і запобігання витокам з гідропідсилювача керма 125мл",
     model: "W64503",
     image: "/assets/wy64503.jpg",
@@ -330,7 +330,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 93,
+    id: 93,
     name: "WYNN'S W64544 Присадка в АКПП і гідропідсилювач 325мл",
     model: "W64544",
     image: "/assets/wy64544.jpg",
@@ -341,7 +341,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 97,
+    id: 97,
     name: "WYNN'S W70759 Сильний очищувач паливної системи бензинових двигунів 325мл",
     model: "W70759",
     image: "/assets/w70759.png",
@@ -352,7 +352,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 98,
+    id: 98,
     name: "WYNN'S W71851 Присадка в паливо (Осушувач палива) 325мл",
     model: "W71851",
     image: "/assets/fffffffffffff.jpg",
@@ -363,7 +363,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 100,
+    id: 100,
     name: "WYNN'S W71867 Присадка в паливо для поглинання водяного конденсату 325мл",
     model: "W71867",
     image: "/assets/w71867.png",
@@ -374,7 +374,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 101,
+    id: 101,
     name: "WYNN'S W72250 Герметик блоку циліндрів 325мл",
     model: "W72250",
     image: "/assets/w72250.png",
@@ -385,7 +385,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 103,
+    id: 103,
     name: "WYNN'S W76401 Комплексна добавка в паливний бак дизельного двигуна 500мл",
     model: "W76401",
     image: "/assets/w76401.png",
@@ -396,7 +396,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 104,
+    id: 104,
     name: "WYNN'S W76459 Сильний очищувач паливної системи дизельних двигунів 325мл",
     model: "W76459",
     image: "/assets/w76459.png",
@@ -407,7 +407,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 105,
+    id: 105,
     name: "WYNN'S W76695 Рідина (промивка) для установки FuelServe (бензин) 1л",
     model: "W76695",
     image: "/assets/w76695.png",
@@ -418,7 +418,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 106,
+    id: 106,
     name: "WYNN'S W76844 М'який очисник масляної системи (на 500 км.) 325мл",
     model: "W76844",
     image: "/assets/w76844.png",
@@ -429,7 +429,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 107,
+    id: 107,
     name: "WYNN'S W77101 Комплексна добавка в моторну оливу 500мл",
     model: "W77101",
     image: "/assets/w77101.png",
@@ -440,7 +440,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 109,
+    id: 109,
     name: "WYNN'S W77395 Очисник скла концентрат зимовий -58С 1л",
     model: "W77395",
     image: "/assets/w77395.png",
@@ -451,7 +451,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 128,
+    id: 128,
     name: "W77914 WYNN'S 5W30 LONGLIFE 04 1L",
     model: "W77914",
     image: "/assets/w77914-5w-30.png",
@@ -462,7 +462,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 121,
+    id: 121,
     name: "WYNN'S W28679 Очисник турбокомпресора (аерозоль) 200мл",
     model: "W28679",
     image: "/assets/wy28679.jpg",
@@ -473,7 +473,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 50,
+    id: 50,
     name: "WYNN'S W12293 Супер очисник паливної системи дизельних двигунів 500мл",
     model: "W12293",
     image: "/assets/wy12293.jpg",
@@ -484,7 +484,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 57,
+    id: 57,
     name: "WYNN'S W25541 Очисник системи охолодження 325мл",
     model: "W25541",
     image: "/assets/w25541.png",
@@ -495,7 +495,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 130,
+    id: 130,
     name: "W77924 WYNN'S 5W30 LONGLIFE ECO ENERGY 1L",
     model: "W77924",
     image: "/assets/w77924-500x500.png",
@@ -506,7 +506,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 122,
+    id: 122,
     name: "WYNN'S W28263 Присадка до дизельного палива (профілактика сажових фільтрів) 325мл",
     model: "W28263",
     image: "/assets/28263.png",
@@ -517,7 +517,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 74,
+    id: 74,
     name: "WYNN'S W50672 Герметик для бензинових і дизельних двигунів 325мл",
     model: "W50672",
     image: "/assets/w50672.png",
@@ -528,7 +528,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 75,
+    id: 75,
     name: "WYNN'S W50865 Присадка в оливу Stop smoke 325мл",
     model: "W50865",
     image: "/assets/w50865.png",
@@ -539,7 +539,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 76,
+    id: 76,
     name: "WYNN'S W51265 Промивка для всіх типів масляних систем 425мл",
     model: "W51265",
     image: "/assets/w51265.png",
@@ -550,7 +550,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 79,
+    id: 79,
     name: "WYNN'S W51372 Присадка в моторну оливу для старих двигунів 325мл",
     model: "W51372",
     image: "/assets/wynnsw51372.png",
@@ -561,7 +561,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 87,
+    id: 87,
     name: "WYNN'S W58055 Аерозоль для легкого запуску холодного двигуна 200мл",
     model: "W58055",
     image: "/assets/w58055.png",
@@ -572,7 +572,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 95,
+    id: 95,
     name: "WYNN'S W66841 Присадка в двигун з системою старт-стоп325мл",
     model: "W66841",
     image: "/assets/w66841.png",
@@ -583,7 +583,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 96,
+    id: 96,
     name: "WYNN'S W70701Комплексна добавка в паливний бак бензинового двигуна 500мл",
     model: "W70701",
     image: "/assets/w70701.png",
@@ -594,7 +594,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 99,
+    id: 99,
     name: "WYNN'S W71864 Очисник інжектора паливна добавка для бензинових і дизельних двигунів 325мл",
     model: "W71864",
     image: "/assets/w71864.png",
@@ -605,7 +605,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 125,
+    id: 125,
     name: "WYNN'S W74944 Присадка для збільшення тиску масла 325мл",
     model: "W74944",
     image: "/assets/wy74944.jpg",
@@ -616,7 +616,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 129,
+    id: 129,
     name: "W77915 WYNN'S 5W30 LONGLIFE 04 5L",
     model: "W77915",
     image: "/assets/w77915.jpg",
@@ -627,7 +627,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 108,
+    id: 108,
     name: "WYNN'S W77263 Присадка в двигуни с системою старт-стоп 325мл",
     model: "W77263",
     image: "/assets/w77263.png",
@@ -638,7 +638,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 110,
+    id: 110,
     name: "WYNN'S W77441 Герметик змащувальної системи 325мл",
     model: "W77441",
     image: "/assets/wy77441.jpg",
@@ -649,7 +649,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 127,
+    id: 127,
     name: "W77834 WYNN'S 15W40 TDI-GTI 1L",
     model: "W77834 ",
     image: "/assets/w77834-15w-40.png",
@@ -660,7 +660,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 126,
+    id: 126,
     name: "W77976  WYNN'S 0W40 EXTREME POWER 4L ",
     model: "W77976",
     image: "/assets/w77976-0w-40.png",
@@ -671,7 +671,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 131,
+    id: 131,
     name: "W77925 WYNN'S 5W30 LONGLIFE ECO ENERGY 5L",
     model: "W77925",
     image: "/assets/w77925-500x500-1200x630.png",
@@ -682,7 +682,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 134,
+    id: 134,
     name: "W77934 WYNN'S 5W40 LONGLIFE 505.01 1L",
     model: "W77934",
     image: "/assets/w77934-500x500.png",
@@ -693,7 +693,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 148,
+    id: 148,
     name: "W68431 Обладнання для заміни рідини в АКПП TRANSERVE",
     model: "W68431 ",
     image: "/assets/wy68431.jpg",
@@ -704,7 +704,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 135,
+    id: 135,
     name: "W77936 WYNN'S 5W40 LONGLIFE 505.01 4L",
     model: "W77936",
     image: "/assets/w77935-500x500.png",
@@ -715,7 +715,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 136,
+    id: 136,
     name: "W77935 WYNN'S 5W40 LONGLIFE 505.01 5L ",
     model: "W77935",
     image: "/assets/w77935-500x500.png",
@@ -726,7 +726,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 137,
+    id: 137,
     name: "W77804 WYNN'S 5W40 PLUS COMPETITION 1L ",
     model: "W77804",
     image: "/assets/w77804-500x500.png",
@@ -737,7 +737,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 138,
+    id: 138,
     name: "W77806 WYNN'S 5W40 PLUS COMPETITION 4L",
     model: "W77806",
     image: "/assets/w77805-500x500.png",
@@ -748,7 +748,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 140,
+    id: 140,
     name: "W77854 WYNN'S 80W90 GEAR SAVER 1L",
     model: "W77854",
     image: "/assets/w77854-500x500.png",
@@ -759,7 +759,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 152,
+    id: 152,
     name: "WYNN'S W77396 Очисник скла концентрат зимовий -58С 5л",
     model: "W77396",
     image: "/assets/w77396.jpg",
@@ -770,7 +770,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 132,
+    id: 132,
     name: "W77904 WYNN'S 5W30 LONGLIFE GOLD 504/507 1L",
     model: "W77904",
     image: "/assets/w77904-500x500-228x228.png",
@@ -781,7 +781,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 133,
+    id: 133,
     name: "W77905 WYNN'S 5W30 LONGLIFE GOLD 504/507 5L",
     model: "W77905",
     image: "/assets/w77905-228x228.png",
@@ -792,7 +792,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 139,
+    id: 139,
     name: "W77805 WYNN'S 5W40 PLUS COMPETITION 5L",
     model: "W77805",
     image: "/assets/w77805-500x500.png",
@@ -803,7 +803,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 149,
+    id: 149,
     name: "W68480 Установка для обслуговування кондиціонерів Wynn's Aircomatic® III",
     model: "W68480",
     image: "/assets/wy68480.jpg",
@@ -814,7 +814,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 159,
+    id: 159,
     name: "WYNN'S W11979 Tyre Fix Засіб для ремонту шин (400мл)",
     model: "W11979",
     image: "/assets/wy11979.jpg",
@@ -825,7 +825,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 150,
+    id: 150,
     name: "W68432 Прилад для очистки паливної системи FUELSYSTEMSERVE",
     model: "W68432",
     image: "/assets/w68432.png",
@@ -836,7 +836,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 151,
+    id: 151,
     name: "W68433 Wynn's MultiSERVE",
     model: "W68433",
     image: "/assets/wy68433.jpg",
@@ -847,7 +847,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 147,
+    id: 147,
     name: "W68465 Wynn's EnviroPurge® - Установка для промивки паливної системи",
     model: "W68465",
     image: "/assets/w68465.jpg",
@@ -858,7 +858,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 78,
+    id: 78,
     name: "WYNN'S W51351 Відновлювач компресії двигуна (анти-дим) 400мл",
     model: "W51351",
     image: "/assets/w51351.png",
@@ -869,7 +869,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 144,
+    id: 144,
     name: "WYNN'S W30202 Airco-Fresh® Очисник випарника кондиціонера (аерозоль) 250мл",
     model: "W30202",
     image: "/assets/wy30202.jpg",
@@ -880,7 +880,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 145,
+    id: 145,
     name: "WYNN'S W29601 CLEAN AIR Нейтралізатор неприємних запахів (аерозоль) 100мл",
     model: "W29601",
     image: "/assets/wy29601.jpg",
@@ -891,7 +891,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 146,
+    id: 146,
     name: "WYNN'S W32514 Розморожувач скла DE-ICER 500мл",
     model: "W32514",
     image: "/assets/w32514.png",
@@ -902,7 +902,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 165,
+    id: 165,
     name: "WYNN'S W45201Концентрат рідини в бачок омивача літній(1:20) 250мл",
     model: "W45201",
     image: "/assets/wy45201.jpg",
@@ -913,7 +913,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 158,
+    id: 158,
     name: " WYNN'S Wheel Cleaner W42403 Очисник колісних дисків(500мл)",
     model: "W42403 ",
     image: "/assets/wy42403.jpg",
@@ -924,7 +924,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 162,
+    id: 162,
     name: " WYNN'S W41103 Universal Degreaser Універсальний обезжирювач (500мл)",
     model: "W41103",
     image: "/assets/wy41103.jpg",
@@ -935,7 +935,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 171,
+    id: 171,
     name: "WYNNS W37593 Присадка Petrol Emission Reducer 500мл",
     model: "W37593",
     image: "/assets/wy37593.jpg",
@@ -946,7 +946,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 160,
+    id: 160,
     name: "WYNN'S W41903 Tyre Shine для захисту шин та гуми (500мл)",
     model: "W41903",
     image: "/assets/wy41903.jpg",
@@ -957,7 +957,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 143,
+    id: 143,
     name: "WYNN'S W45101  Очисник скла концентрат зимовий -58С 250мл",
     model: "W45101",
     image: "/assets/w45101.jpg",
@@ -968,7 +968,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 156,
+    id: 156,
     name: "WYNN'S W40603 Carpet &amp; Upholstery Очисник салона автомобіля  (400мл)",
     model: "W40603",
     image: "/assets/wy40603.jpg",
@@ -979,7 +979,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 154,
+    id: 154,
     name: "WYNN'S W43103 Glass Cleaner Очисник скла, фонарів і дзеркал автомобіля(550мл)",
     model: "W43103 ",
     image: "/assets/wy43103.jpg",
@@ -990,7 +990,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 155,
+    id: 155,
     name: "WYNN'S W40303  Dash Clean &amp; Protect Очисник приладової панелі  (300мл)",
     model: "W40303",
     image: "/assets/wy40303.jpg",
@@ -1001,7 +1001,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 161,
+    id: 161,
     name: "WYNN'S W41703 Dash &amp; Display Cleaner Oчисник приладової панелі та дисплеїв (500мл)",
     model: "W41703",
     image: "/assets/wy41703.jpg",
@@ -1012,7 +1012,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 153,
+    id: 153,
     name: "WYNN'S W28779 DPF OFF-CAR CLEANING FLUSH Очисник сажового фільтра (зі зняттям) 500мл",
     model: "W28779",
     image: "/assets/wy28779.jpg",
@@ -1023,7 +1023,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 157,
+    id: 157,
     name: "WYNN'S W77405 Hand Cleaning Paste Паста-очисник для рук (3,78л)",
     model: "W77405",
     image: "/assets/wy77405.jpg",
@@ -1034,7 +1034,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 141,
+    id: 141,
     name: "WYNN'S W45202 Концентрат рідини в бачок омивача літній(1:20) 1л",
     model: "W45202",
     image: "/assets/w45202.png",
@@ -1045,7 +1045,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 163,
+    id: 163,
     name: "WYNN'S AIRCO-PURE W38501 Дезинфектор, очисник кондиціонера(150мл)",
     model: "W38501",
     image: "/assets/wy38501.jpg",
@@ -1056,7 +1056,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 164,
+    id: 164,
     name: "WYNN'S WF3313 Мембрана для системи AIRCOMATIC III",
     model: "WF3313",
     image: "/assets/wf3313.jpg",
@@ -1067,7 +1067,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 166,
+    id: 166,
     name: "WYNN'S W11395 Очисник  системи впуску Diesel Air Intake Cleaner 1л ",
     model: "W11395",
     image: "/assets/wy11395.jpg",
@@ -1078,7 +1078,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 167,
+    id: 167,
     name: "WYNN'S W38295 Очисник турбіни дизельного двигуна Diesel Turbo Serve 1л",
     model: "W38295",
     image: "/assets/wy38295.jpg",
@@ -1089,7 +1089,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 168,
+    id: 168,
     name: "WYNN'S W18784 Очисник + промивка сажового фільтра  DPF Cleaner &amp; Flush (1л + 1л)",
     model: "W18784",
     image: "/assets/wy18784.jpg",
@@ -1100,7 +1100,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 170,
+    id: 170,
     name: "WYNN'S W35792 Petrol Pre-Emission Test Treatment Комплексна присадка для бензинових та гібрідних двигунів (500мл)",
     model: "W35792",
     image: "/assets/wy35792.jpg",
@@ -1111,7 +1111,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 123,
+    id: 123,
     name: "WYNN'S W29393 PETROL EMISSION REDUCER (PETROL POWER 3) для бензинових двигунів. Максимальна економія палива. 500мл",
     model: "W29393",
     image: "/assets/wynnsw29393.jpg",
@@ -1122,7 +1122,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 169,
+    id: 169,
     name: " WYNN'S W28879 Пінний очисник впускного колектора та клапанів від нагара Direct Injection Valve Cleaner  (500мл)",
     model: "W28879 ",
     image: "/assets/wy28879.jpg",
@@ -1133,7 +1133,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 124,
+    id: 124,
     name: "WYNN'S W50393 Супер очисник/присадка DIESEL EMISSION REDUCER (DIESEL POWER 3) для дизельних двигунів 500мл",
     model: "W50393",
     image: "/assets/new5.png",
@@ -1144,7 +1144,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 142,
+    id: 142,
     name: "WYNN'S W14355 Очисник  INJECTOR DECARBONIZER 500мл",
     model: "W14355",
     image: "/assets/w14355.jpg",
@@ -1155,7 +1155,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 111,
+    id: 111,
     name: "WYNN'S W89195 Рідина (промивка) для установки FuelServe (дизель) 1л",
     model: "W89195",
     image:
@@ -1167,7 +1167,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 58,
+    id: 58,
     name: "WYNN'S W25692 Очисник каталізатора 500мл",
     model: "W25692",
     image: "/assets/wynnsw25692.jpg",
@@ -1178,7 +1178,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 172,
+    id: 172,
     name: "WYNN'S W21090 Присадка-очищувач Crystal Clean&amp;Protect 500мл",
     model: "W21090",
     image: "/assets/w21090.jpg",
@@ -1189,7 +1189,7 @@ export const PRODUCTS_MOCK = [
     availability: 1,
   },
   {
-    product_id: 173,
+    id: 173,
     name: "WYNN'S W21002 Присадка-очищувач Crystal Clean&amp;Protect 125мл",
     model: "W21002",
     image: "/assets/w21002.jpg",
