@@ -7,10 +7,16 @@ interface ProductOverviewProps {
 
 const ProductOverview: React.FC<ProductOverviewProps> = ({ productId }) => {
   const product = PRODUCTS_MOCK.find((el) => el.product_id == productId);
+
+  if (!product) {
+    return <div>No product found</div>;
+  }
+
   return (
     <div>
-      <h4>{product?.name}</h4>
-      <p>{product?.price}</p>
+      <img src={product.image} alt={product.model} />
+      <h4>{product.name}</h4>
+      <p>{product.price}</p>
     </div>
   );
 };
