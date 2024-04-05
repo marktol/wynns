@@ -2,7 +2,7 @@
 
 import { Input } from "@mui/material";
 import React, { ChangeEvent, useState } from "react";
-import { Wrapper } from "./Header.styled";
+import { Logo, Wrapper } from "./Header.styled";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Link from "next/link";
 
@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <Wrapper>
-      <div>WYNN'S</div>
+      <Logo src="/wynns-logo.png" alt="" />
       <div>Каталог</div>
       <Input
         placeholder="Введите товар"
