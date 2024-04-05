@@ -8,7 +8,7 @@ import { PRODUCTS_MOCK } from "../../../../products";
 const ProductPage = () => {
   const { id } = useParams();
 
-  const product = PRODUCTS_MOCK.find((el) => el.product_id == Number(id));
+  const product = PRODUCTS_MOCK.find((el) => el.id == Number(id));
 
   if (!product) {
     return <div>No product found</div>;
