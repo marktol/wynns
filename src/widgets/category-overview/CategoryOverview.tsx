@@ -1,6 +1,6 @@
 import ProductOverview from "@/shared/product-overview/ProductOverview";
 import React from "react";
-import { StyledDiv } from "./CategoryOverview.styled";
+import { HeaderText, StyledDiv } from "./CategoryOverview.styled";
 
 interface CategoryOverviewProps {
   name: string;
@@ -13,7 +13,7 @@ const CategoryOverview: React.FC<CategoryOverviewProps> = ({
 }) => {
   return (
     <StyledDiv>
-      <h2>{name}</h2>
+      <HeaderText>{name}</HeaderText>
       {products.map((el: number) => {
         return <ProductOverview key={el} productId={el} />;
       })}
