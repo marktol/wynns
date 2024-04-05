@@ -8,14 +8,14 @@ interface ProductOverviewProps {
 }
 
 const ProductOverview: React.FC<ProductOverviewProps> = ({ productId }) => {
-  const product = PRODUCTS_MOCK.find((el) => el.product_id == productId);
+  const product = PRODUCTS_MOCK.find((el) => el.id == productId);
   const router = useRouter();
   if (!product) {
     return <div>No product found</div>;
   }
 
   const handleClick = () => {
-    router.push(`product/${product.product_id}`);
+    router.push(`product/${product.id}`);
   };
 
   return (
