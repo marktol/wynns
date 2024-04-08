@@ -8,5 +8,5 @@ export const StyledDiv = styled.div`
 
 export const HeaderText = styled.h2`
   text-align: center;
-  height: 60px;
+  height: 30px;
 `;

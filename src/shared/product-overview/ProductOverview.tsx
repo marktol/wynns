@@ -1,6 +1,12 @@
 import React from "react";
 import { PRODUCTS_MOCK } from "../../../products";
-import { FlexDiv, ImageStyled } from "./ProductOverview.styled";
+import {
+  FlexDiv,
+  ImageStyled,
+  ProductInfo,
+  ProductName,
+  ProductPrice,
+} from "./ProductOverview.styled";
 import { useRouter } from "next/navigation";
 
 interface ProductOverviewProps {
@@ -21,10 +27,10 @@ const ProductOverview: React.FC<ProductOverviewProps> = ({ productId }) => {
   return (
     <FlexDiv onClick={handleClick}>
       <ImageStyled src={product.image} alt={product.model} />
-      <div>
-        <h5>{product.name}</h5>
-        <p>{product.price} ₴</p>
-      </div>
+      <ProductInfo>
+        <ProductName>{product.name}</ProductName>
+        <ProductPrice>{product.price} ₴</ProductPrice>
+      </ProductInfo>
     </FlexDiv>
   );
 };

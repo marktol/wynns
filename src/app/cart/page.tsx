@@ -68,7 +68,7 @@ const Page = () => {
 
   return (
     <Wrapper>
-      <YourOrder>Ваше замовлення:</YourOrder>
+      <YourOrder>Оформлення замовлення</YourOrder>
       {cartData.map((item) => {
         const currEl = PRODUCTS_MOCK.find((el) => el.id === item.id);
         if (currEl)
@@ -119,6 +119,7 @@ const Page = () => {
             </CartBlock>
           );
       })}
+      <h3>Покупець</h3>
     </Wrapper>
   );
 };
