@@ -22,3 +22,8 @@ export interface CartItem {
   id: number;
   quantity: number;
 }
+
+export interface CategoryProducts {
+  categoryId: number;
+  products: Product[];
+}

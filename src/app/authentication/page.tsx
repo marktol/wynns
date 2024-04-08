@@ -50,7 +50,7 @@ const Page = () => {
       <form onSubmit={handleSubmit}>
         <TextField
           id="email"
-          label="Email"
+          label="Логін"
           type="email"
           name="email"
           required
@@ -60,7 +60,7 @@ const Page = () => {
         />
         <TextField
           id="password"
-          label="Password"
+          label="Пароль"
           type="password"
           name="password"
           required
@@ -68,7 +68,7 @@ const Page = () => {
           value={password}
           onChange={handleChange}
         />
-        <Button type="submit">Login</Button>
+        <Button type="submit">Увійти</Button>
       </form>
     </>
   );
