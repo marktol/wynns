@@ -74,23 +74,29 @@ const Page = () => {
         if (currEl)
           return (
             <CartBlock key={item.id}>
-              <Grid container spacing={1}>
-                <Grid item sm={2}></Grid>
-                <Grid item sm={1}>
+              <Grid
+                container
+                rowSpacing={1}
+                columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+              >
+                <Grid item md={1} sm={1} xs={1}></Grid>
+                <Grid item md={2} sm={3} xs={3}>
                   <ProductImage src={currEl.image} alt={currEl.name} />
                 </Grid>
-                <Grid item sm={3}>
+
+                <Grid item md={2} sm={7} xs={7}>
                   <h5>{currEl.name}</h5>
                 </Grid>
-                <Grid item sm={1}>
+                <Grid item md={1} sm={2} xs={2}></Grid>
+                <Grid item md={1} sm={2} xs={2}>
                   <div>
                     <p>Ціна</p>
                   </div>
                   <div>
-                    <p>{currEl.price}</p>
+                    <p>{currEl.price.toFixed(0)}</p>
                   </div>
                 </Grid>
-                <Grid item sm={1}>
+                <Grid item md={1} sm={3} xs={3}>
                   <Quantity>
                     <p>Кількість</p>
                     <Buttons>
@@ -100,11 +106,11 @@ const Page = () => {
                     </Buttons>
                   </Quantity>
                 </Grid>
-                <Grid item sm={1}>
+                <Grid item md={1} sm={3} xs={3}>
                   <p>Сума</p>
                   <p>{(item.quantity * currEl.price).toFixed(0)}</p>
                 </Grid>
-                <Grid item sm={1}>
+                <Grid item md={1} sm={1} xs={1}>
                   <MyDeleteIcon>
                     <DeleteIcon onClick={() => handleRemove(item.id)} />
                   </MyDeleteIcon>
