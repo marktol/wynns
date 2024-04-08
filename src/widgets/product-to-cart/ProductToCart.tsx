@@ -5,15 +5,18 @@ import { StyledButton, Wrapper } from "./ProductToCart.module";
 interface ProductToCartInterface {
   price: number;
   availability: number;
+  quantity: number;
+  setQuantity: any;
+  handleBuyClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const ProductToCart: React.FC<ProductToCartInterface> = ({
   price,
   availability,
+  quantity,
+  setQuantity,
+  handleBuyClick,
 }) => {
-  const [quantity, setQuantity] = useState<number>(1);
-  console.log(quantity);
-
   const handleQuantityChange = (
     event:
       | React.FocusEvent<HTMLInputElement>
@@ -38,7 +41,9 @@ const ProductToCart: React.FC<ProductToCartInterface> = ({
           </div>
           <div>
             <QuantityInput value={quantity} onChange={handleQuantityChange} />
-            <StyledButton variant="outlined">КУПИТИ</StyledButton>
+            <StyledButton variant="outlined" onClick={handleBuyClick}>
+              КУПИТИ
+            </StyledButton>
           </div>
         </Wrapper>
       ) : (

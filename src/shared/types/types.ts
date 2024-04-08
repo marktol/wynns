@@ -17,3 +17,8 @@ export interface Category {
 export interface SubCategory extends Category {
   categoryId: number;
 }
+
+export interface CartItem {
+  id: number;
+  quantity: number;
+}
