@@ -6,7 +6,7 @@ import {
   loadDataFromLocalStorage,
   saveDataToLocalStorage,
 } from "@/utils/storage/storage.utils";
-import { Grid } from "@mui/material";
+import { Button, Grid, TextField } from "@mui/material";
 import { CartItem } from "@/shared/types/types";
 import { PRODUCTS_MOCK } from "../../../products";
 import {
@@ -24,19 +24,29 @@ import RemoveIcon from "@mui/icons-material/Remove";
 
 const Page = () => {
   const [cartData, setCartData] = useState<CartItem[]>([]);
+  const [total, setTotal] = useState<number>(0);
 
   useEffect(() => {
     const data = loadDataFromLocalStorage(CART_PRODUCTS);
     if (data) {
       try {
         const parsedData = JSON.parse(data);
-        console.log(parsedData);
         setCartData(parsedData);
       } catch (error) {
         console.error("Error parsing JSON data:", error);
       }
     }
   }, []);
+
+  useEffect(() => {
+    const sum = cartData
+      ?.reduce((acc, el) => {
+        const product = PRODUCTS_MOCK.find((product) => product.id === el.id);
+        return acc + (product ? el.quantity * product.price : 0);
+      }, 0)
+      .toFixed(0);
+    setTotal(Number(sum) || 0);
+  }, [cartData]);
 
   const handleRemove = (id: number) => {
     const data = cartData.filter((el) => el.id !== id);
@@ -65,6 +75,8 @@ const Page = () => {
     setCartData(updatedCartData);
     saveDataToLocalStorage(CART_PRODUCTS, updatedCartData);
   };
+
+  const handleSubmit = () => {};
 
   return (
     <Wrapper>
@@ -120,6 +132,14 @@ const Page = () => {
           );
       })}
       <h3>Покупець</h3>
+      <form onSubmit={handleSubmit}>
+        <TextField variant="outlined" placeholder="Ім'я прізвище" />
+        <TextField variant="outlined" placeholder="Телефон" />
+        <TextField variant="outlined" placeholder="Електронна пошта" />
+        <Button type="submit" variant="outlined">
+          Оформити замовлення на {total}
+        </Button>
+      </form>
     </Wrapper>
   );
 };
