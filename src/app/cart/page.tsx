@@ -6,8 +6,21 @@ import {
   loadDataFromLocalStorage,
   saveDataToLocalStorage,
 } from "@/utils/storage/storage.utils";
-import { Button } from "@mui/material";
+import { Grid } from "@mui/material";
 import { CartItem } from "@/shared/types/types";
+import { PRODUCTS_MOCK } from "../../../products";
+import {
+  Buttons,
+  CartBlock,
+  ProductImage,
+  Quantity,
+  Wrapper,
+  YourOrder,
+  MyDeleteIcon,
+} from "./page.module";
+import DeleteIcon from "@mui/icons-material/Delete";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 
 const Page = () => {
   const [cartData, setCartData] = useState<CartItem[]>([]);
@@ -28,7 +41,7 @@ const Page = () => {
   const handleRemove = (id: number) => {
     const data = cartData.filter((el) => el.id !== id);
     setCartData(data);
-    saveDataToLocalStorage(CART_PRODUCTS, cartData);
+    saveDataToLocalStorage(CART_PRODUCTS, data);
   };
 
   const handlePlusItem = (id: number) => {
@@ -54,24 +67,53 @@ const Page = () => {
   };
 
   return (
-    <>
-      <div>
-        {cartData.map((item, index) => (
-          <div key={index}>
-            <h1>Ваше замовлення:</h1>
-            <p>Ціна</p>
-            <p>Кількість</p>
-            <p>Сума</p>
-            <p>ID: {item.id}</p>
-            <Button onClick={() => handleMinusItem(item.id)}>-</Button>
-            <p>Quantity: {item.quantity}</p>
-
-            <Button onClick={() => handlePlusItem(item.id)}>+</Button>
-            <Button onClick={() => handleRemove(item.id)}>Видалити</Button>
-          </div>
-        ))}
-      </div>
-    </>
+    <Wrapper>
+      <YourOrder>Ваше замовлення:</YourOrder>
+      {cartData.map((item) => {
+        const currEl = PRODUCTS_MOCK.find((el) => el.id === item.id);
+        if (currEl)
+          return (
+            <CartBlock key={item.id}>
+              <Grid container spacing={1}>
+                <Grid item sm={2}></Grid>
+                <Grid item sm={1}>
+                  <ProductImage src={currEl.image} alt={currEl.name} />
+                </Grid>
+                <Grid item sm={3}>
+                  <h5>{currEl.name}</h5>
+                </Grid>
+                <Grid item sm={1}>
+                  <div>
+                    <p>Ціна</p>
+                  </div>
+                  <div>
+                    <p>{currEl.price}</p>
+                  </div>
+                </Grid>
+                <Grid item sm={1}>
+                  <Quantity>
+                    <p>Кількість</p>
+                    <Buttons>
+                      <RemoveIcon onClick={() => handleMinusItem(item.id)} />
+                      {item.quantity}
+                      <AddIcon onClick={() => handlePlusItem(item.id)} />
+                    </Buttons>
+                  </Quantity>
+                </Grid>
+                <Grid item sm={1}>
+                  <p>Сума</p>
+                  <p>{(item.quantity * currEl.price).toFixed(0)}</p>
+                </Grid>
+                <Grid item sm={1}>
+                  <MyDeleteIcon>
+                    <DeleteIcon onClick={() => handleRemove(item.id)} />
+                  </MyDeleteIcon>
+                </Grid>
+              </Grid>
+            </CartBlock>
+          );
+      })}
+    </Wrapper>
   );
 };
 
