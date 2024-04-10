@@ -1,9 +1,10 @@
 "use client";
 
-import { Button, Input, Popover } from "@mui/material";
+import { Button, Popover, Typography } from "@mui/material";
 import React, { ChangeEvent, useState } from "react";
 import {
   Logo,
+  Search,
   StyledButton,
   StyledContent,
   StyledInput,
@@ -14,6 +15,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import BasicModal from "../modal/BasicModal";
 import InputMask from "react-input-mask";
+import SearchIcon from "@mui/icons-material/Search";
 
 const Header = () => {
   const [search, setSearch] = useState("");
@@ -65,11 +67,14 @@ const Header = () => {
   return (
     <Wrapper>
       <Logo onClick={navigateToHomePage} src="/wynns-logo.png" alt="" />
-      <div>Каталог</div>
-      <Input
+      <Typography variant="h6">Каталог</Typography>
+      <Search
         placeholder="Введите товар"
         value={search}
         onChange={onChangeSearch}
+        InputProps={{
+          endAdornment: <SearchIcon />,
+        }}
       />
 
       <Button aria-describedby={id} variant="contained" onClick={handleClick}>
