@@ -17,10 +17,27 @@ export const StyledButton = styled(Button)`
   margin-bottom: 20px;
   width: 250px;
 `;
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+`;
 
 export const CloseIconToEnd = styled.div`
+  width: 30px;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
+  justify-content: flex-end;
+`;
+
+export const StyledLink = styled.a`
+  margin-top: 15px;
+  text-decoration: "none";
+  color: "inherit";
+`;
+
+export const StyledModalIcon = styled.div`
+  display: flex;
+  align-items: flex-start;
   justify-content: flex-end;
 `;
