@@ -1,22 +1,26 @@
 "use client";
-
-import { useParams } from "next/navigation";
 import React, { useState } from "react";
+import { useParams } from "next/navigation";
 import he from "he";
 import { PRODUCTS_MOCK } from "../../../../products";
 import ProductToCart from "@/widgets/product-to-cart/ProductToCart";
 import { Header, StyledImage, Description } from "./page.styled";
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import {
   loadDataFromLocalStorage,
   saveDataToLocalStorage,
 } from "@/utils/storage/storage.utils";
 import { CART_PRODUCTS } from "@/mocks/constants/ids";
 import { CartItem } from "@/shared/types/types";
+import BasicModal from "@/widgets/modal/BasicModal";
+import { useRouter } from "next/navigation";
 
 const ProductPage = () => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState<number>(1);
+  const [showModal, setShowModal] = useState<boolean>(false);
+
+  const router = useRouter();
 
   const product = PRODUCTS_MOCK.find((el) => el.id == Number(id));
 
@@ -41,6 +45,16 @@ const ProductPage = () => {
     }
 
     saveDataToLocalStorage(CART_PRODUCTS, updatedData);
+
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleGoToCart = () => {
+    router.push("/cart");
   };
 
   return (
@@ -68,6 +82,12 @@ const ProductPage = () => {
         </Grid>
         <Grid item xs={1} sm={3} />
       </Grid>
+
+      <BasicModal open={showModal} onClose={handleCloseModal}>
+        <h3>Товар був доданий до кошику</h3>
+        <Button onClick={handleCloseModal}>Продовжити покупки</Button>
+        <Button onClick={handleGoToCart}>Перейти до кошику</Button>
+      </BasicModal>
     </div>
   );
 };

@@ -1,3 +1,5 @@
+import { Button, TextField } from "@mui/material";
+import InputMask from "react-input-mask";
 import styled from "styled-components";
 
 export const CartBlock = styled.div`
@@ -33,4 +35,24 @@ export const MyDeleteIcon = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 30px;
+`;
+export const StyledInput = styled(TextField)`
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 250px;
+`;
+
+export const StyledButton = styled(Button)`
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 250px;
+`;
+
+export const StyledForm = styled.form`
+  display: block;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* добавляем отступ сверху для разделения формы от списка заказов */
 `;

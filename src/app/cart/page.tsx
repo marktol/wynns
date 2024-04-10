@@ -6,7 +6,7 @@ import {
   loadDataFromLocalStorage,
   saveDataToLocalStorage,
 } from "@/utils/storage/storage.utils";
-import { Button, Grid, TextField } from "@mui/material";
+import { Grid } from "@mui/material";
 import { CartItem } from "@/shared/types/types";
 import { PRODUCTS_MOCK } from "../../../products";
 import {
@@ -17,14 +17,19 @@ import {
   Wrapper,
   YourOrder,
   MyDeleteIcon,
+  StyledInput,
+  StyledButton,
+  StyledForm,
 } from "./page.module";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import InputMask from "react-input-mask";
 
 const Page = () => {
   const [cartData, setCartData] = useState<CartItem[]>([]);
   const [total, setTotal] = useState<number>(0);
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   useEffect(() => {
     const data = loadDataFromLocalStorage(CART_PRODUCTS);
@@ -76,11 +81,18 @@ const Page = () => {
     saveDataToLocalStorage(CART_PRODUCTS, updatedCartData);
   };
 
+  const handlePhoneNumberChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setPhoneNumber(event.target.value);
+  };
+
   const handleSubmit = () => {};
 
   return (
     <Wrapper>
       <YourOrder>Оформлення замовлення</YourOrder>
+      <h3>Ваше замовлення</h3>
       {cartData.map((item) => {
         const currEl = PRODUCTS_MOCK.find((el) => el.id === item.id);
         if (currEl)
@@ -98,6 +110,7 @@ const Page = () => {
 
                 <Grid item md={2} sm={7} xs={7}>
                   <h5>{currEl.name}</h5>
+                  <p>{currEl.model}</p>
                 </Grid>
                 <Grid item md={1} sm={2} xs={2}></Grid>
                 <Grid item md={1} sm={2} xs={2}>
@@ -132,14 +145,26 @@ const Page = () => {
           );
       })}
       <h3>Покупець</h3>
-      <form onSubmit={handleSubmit}>
-        <TextField variant="outlined" placeholder="Ім'я прізвище" />
-        <TextField variant="outlined" placeholder="Телефон" />
-        <TextField variant="outlined" placeholder="Електронна пошта" />
-        <Button type="submit" variant="outlined">
+      <StyledForm onSubmit={handleSubmit}>
+        <StyledInput type="tel" variant="outlined" placeholder="Ім'я" />
+        <InputMask
+          required
+          placeholder="Телефон"
+          mask="+38 (999) 999-99-99"
+          value={phoneNumber}
+          onChange={handlePhoneNumberChange}
+        >
+          <StyledInput variant="outlined" />
+        </InputMask>
+        <StyledInput
+          type="email"
+          variant="outlined"
+          placeholder="Електронна пошта"
+        />
+        <StyledButton type="submit" variant="outlined">
           Оформити замовлення на {total}
-        </Button>
-      </form>
+        </StyledButton>
+      </StyledForm>
     </Wrapper>
   );
 };
