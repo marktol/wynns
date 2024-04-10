@@ -1,7 +1,7 @@
 "use client";
 
 import { signInAuthUserWithEmailAndPassword } from "@/utils/firebase/firebase.utils";
-import { Button, TextField } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, FormEvent, useState } from "react";
 
@@ -48,27 +48,33 @@ const Page = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <TextField
-          id="email"
-          label="Email"
-          type="email"
-          name="email"
-          required
-          focused
-          value={email}
-          onChange={handleChange}
-        />
-        <TextField
-          id="password"
-          label="Password"
-          type="password"
-          name="password"
-          required
-          focused
-          value={password}
-          onChange={handleChange}
-        />
-        <Button type="submit">Login</Button>
+        <Box>
+          <TextField
+            id="email"
+            label="Логін"
+            type="email"
+            name="email"
+            required
+            focused
+            value={email}
+            onChange={handleChange}
+          />
+        </Box>
+        <Box marginTop={2}>
+          <TextField
+            id="password"
+            label="Пароль"
+            type="password"
+            name="password"
+            required
+            focused
+            value={password}
+            onChange={handleChange}
+          />
+        </Box>
+        <Box marginTop={1}>
+          <Button type="submit">Увійти</Button>
+        </Box>
       </form>
     </>
   );
