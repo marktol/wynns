@@ -15,6 +15,8 @@ import { Box, Button, Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 import { SimpleTreeView } from "@mui/x-tree-view/SimpleTreeView";
 import { TreeItem } from "@mui/x-tree-view/TreeItem";
+import { StyledImage, StyledProduct } from "./page.module";
+import EditIcon from "@mui/icons-material/Edit";
 
 const Page = () => {
   const [selectedCategories, setSelectedCategories] = useState<Number[]>([]);
@@ -41,6 +43,8 @@ const Page = () => {
   const signOut = async () => {
     await signOutUser();
   };
+
+  const handleEditClick = (id: number) => {};
 
   return (
     <ProtectedRoute>
@@ -93,7 +97,19 @@ const Page = () => {
                   }
                   return accumulator;
                 }, [])
-                .map((p) => <div key={p.id}>{p.name}</div>)}
+                .map((p) => (
+                  <StyledProduct key={p.id}>
+                    <div
+                      onClick={() => {
+                        handleEditClick(p.id);
+                      }}
+                    >
+                      <EditIcon />
+                    </div>
+                    <StyledImage src={p.image} alt={p.model} />
+                    <p>{p.name}</p>
+                  </StyledProduct>
+                ))}
           </Grid>
         </Grid>
       </Box>

@@ -110,7 +110,7 @@ const Page = () => {
 
                 <Grid item md={2} sm={7} xs={7}>
                   <h5>{currEl.name}</h5>
-                  <p>{currEl.model}</p>
+                  <p>Код: {currEl.model}</p>
                 </Grid>
                 <Grid item md={1} sm={2} xs={2}></Grid>
                 <Grid item md={1} sm={2} xs={2}>
@@ -118,7 +118,7 @@ const Page = () => {
                     <p>Ціна</p>
                   </div>
                   <div>
-                    <p>{currEl.price.toFixed(0)}</p>
+                    <p>{currEl.price.toFixed(0)} ₴</p>
                   </div>
                 </Grid>
                 <Grid item md={1} sm={3} xs={3}>
@@ -133,7 +133,7 @@ const Page = () => {
                 </Grid>
                 <Grid item md={1} sm={3} xs={3}>
                   <p>Сума</p>
-                  <p>{(item.quantity * currEl.price).toFixed(0)}</p>
+                  <p>{(item.quantity * currEl.price).toFixed(0)} ₴</p>
                 </Grid>
                 <Grid item md={1} sm={1} xs={1}>
                   <MyDeleteIcon>
@@ -162,7 +162,7 @@ const Page = () => {
           placeholder="Електронна пошта"
         />
         <StyledButton type="submit" variant="outlined">
-          Оформити замовлення на {total}
+          Оформити замовлення на {total} ₴
         </StyledButton>
       </StyledForm>
     </Wrapper>
