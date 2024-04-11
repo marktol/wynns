@@ -17,6 +17,7 @@ import { SimpleTreeView } from "@mui/x-tree-view/SimpleTreeView";
 import { TreeItem } from "@mui/x-tree-view/TreeItem";
 import { StyledImage, StyledProduct } from "./page.module";
 import EditIcon from "@mui/icons-material/Edit";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
   const [selectedCategories, setSelectedCategories] = useState<Number[]>([]);
@@ -25,6 +26,8 @@ const Page = () => {
   const [categoryProducts, setCategoryProducts] = useState<CategoryProducts[]>(
     []
   );
+
+  const router = useRouter();
 
   useEffect(() => {
     getCollectionAndDocuments("categories").then((data) => {
@@ -44,7 +47,9 @@ const Page = () => {
     await signOutUser();
   };
 
-  const handleEditClick = (id: number) => {};
+  const handleEditClick = (id: number) => {
+    router.push(`admin/${id}`);
+  };
 
   return (
     <ProtectedRoute>

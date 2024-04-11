@@ -9,6 +9,7 @@ import {
 import {
   collection,
   doc,
+  getDoc,
   getDocs,
   getFirestore,
   query,
@@ -67,4 +68,19 @@ export const getCollectionAndDocuments = async (collectionKey: string) => {
 
   const querySnapshot = await getDocs(q);
   return querySnapshot.docs.map((d) => d.data());
+};
+
+export const getDocumentById = async (
+  collectionKey: string,
+  documentId: string
+) => {
+  const docRef = doc(db, collectionKey, documentId);
+
+  const docSnapshot = await getDoc(docRef);
+  if (docSnapshot.exists()) {
+    return docSnapshot.data();
+  } else {
+    console.log("Документ не найден!");
+    return null;
+  }
 };
