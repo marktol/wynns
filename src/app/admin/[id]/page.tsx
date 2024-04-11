@@ -22,13 +22,12 @@ const Page = () => {
   const [subCategories, setSubCategories] = useState<Category[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [allCategories, setAllCategories] = useState<Category[]>([]);
-  console.log("start");
-  allCategories.map((el) => console.log(el));
-  console.log("finish");
+
   const [name, setName] = useState<string>();
   const [price, setPrice] = useState<string>();
   const [availability, setAvailability] = useState<string>();
   const [model, setModel] = useState<string>();
+  const [description, setDescription] = useState<string>();
   const [categoryName, setCategoryName] = React.useState<
     (string | undefined)[]
   >([]);
@@ -44,6 +43,7 @@ const Page = () => {
         setPrice(String(product.price));
         setAvailability(String(product.availability));
         setModel(product.model);
+        setDescription(product.description);
       }
     });
     getCollectionAndDocuments("sub-categories").then((data) => {
@@ -72,7 +72,18 @@ const Page = () => {
     }
   }, [product, subCategories]);
 
-  const onSubmit = () => {};
+  const onSubmit = () => {
+    const updatedProduct = {
+      availability: availability,
+      categories: categories,
+      description: description,
+      id: product?.id,
+      image: product?.image,
+      model: model,
+      name: name,
+      price: price,
+    };
+  };
 
   return (
     <div>
@@ -121,7 +132,10 @@ const Page = () => {
             setCategoryName={setCategoryName}
           />
           <h4>{product.image}</h4>
-          <StyledTextArea value={product.description} />
+          <StyledTextArea
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
           <div>
             <Button type="submit" variant="outlined">
               Сохранить
