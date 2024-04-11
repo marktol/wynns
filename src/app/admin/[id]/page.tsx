@@ -8,9 +8,14 @@ import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import he from "he";
 import { Category, Product, SubCategory } from "@/shared/types/types";
-import { TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import MultipleSelectChip from "@/shared/select-categories/MultipleSelectChip";
-import { StyledInput, StyledTextField, Wrapper } from "./page.styled";
+import {
+  StyledInput,
+  StyledTextArea,
+  StyledTextField,
+  Wrapper,
+} from "./page.styled";
 
 const Page = () => {
   const [product, setProduct] = useState<Product>();
@@ -69,10 +74,12 @@ const Page = () => {
     if (product) return { __html: he.decode(product.description) };
   };
 
+  const onSubmit = () => {};
+
   return (
     <div>
       {product && categoryName && (
-        <Wrapper>
+        <Wrapper onSubmit={onSubmit}>
           <h2>{product.name}</h2>
           <StyledInput>
             <StyledTextField
@@ -116,8 +123,12 @@ const Page = () => {
             setCategoryName={setCategoryName}
           />
           <h4>{product.image}</h4>
-          <textarea value={product.description} />
-          <div dangerouslySetInnerHTML={parseDescription()} />
+          <StyledTextArea value={product.description} />
+          <div>
+            <Button type="submit" variant="outlined">
+              Сохранить
+            </Button>
+          </div>
         </Wrapper>
       )}
     </div>
