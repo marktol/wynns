@@ -6,9 +6,8 @@ import {
 } from "@/utils/firebase/firebase.utils";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import he from "he";
-import { Category, Product, SubCategory } from "@/shared/types/types";
-import { Button, TextField } from "@mui/material";
+import { Category, Product } from "@/shared/types/types";
+import { Button } from "@mui/material";
 import MultipleSelectChip from "@/shared/select-categories/MultipleSelectChip";
 import {
   StyledInput,
@@ -23,13 +22,15 @@ const Page = () => {
   const [subCategories, setSubCategories] = useState<Category[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [allCategories, setAllCategories] = useState<Category[]>([]);
-
+  console.log("start");
+  allCategories.map((el) => console.log(el));
+  console.log("finish");
   const [name, setName] = useState<string>();
   const [price, setPrice] = useState<string>();
   const [availability, setAvailability] = useState<string>();
   const [model, setModel] = useState<string>();
   const [categoryName, setCategoryName] = React.useState<
-    (string | undefined)[] | undefined
+    (string | undefined)[]
   >([]);
 
   const { id } = useParams();
@@ -50,6 +51,7 @@ const Page = () => {
         id: doc.id,
         name: doc.name,
       }));
+      console.log("transformedData : " + transformedData.length);
       setSubCategories(transformedData);
     });
     getCollectionAndDocuments("categories").then((data) => {
@@ -69,10 +71,6 @@ const Page = () => {
       );
     }
   }, [product, subCategories]);
-
-  const parseDescription = () => {
-    if (product) return { __html: he.decode(product.description) };
-  };
 
   const onSubmit = () => {};
 
@@ -118,7 +116,7 @@ const Page = () => {
             />
           </StyledInput>
           <MultipleSelectChip
-            names={subCategories.map((d) => d.name)}
+            names={allCategories.map((d) => d.name)}
             categoryName={categoryName}
             setCategoryName={setCategoryName}
           />
