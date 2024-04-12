@@ -8,7 +8,7 @@ import {
   StyledLink,
   StyledModalIcon,
   Wrapper,
-} from "./PhoneCall.module";
+} from "./PhoneCall.styled";
 import BasicModal from "../modal/BasicModal";
 import InputMask from "react-input-mask";
 import CloseIcon from "@mui/icons-material/Close";

@@ -9,7 +9,7 @@ import {
   StyledButton,
   StyledInput,
   StyledInputRoot,
-} from "./QuantityInput.module";
+} from "./QuantityInput.styled";
 
 interface QuantityInputProps extends Omit<NumberInputProps, "onChange"> {
   value: number;

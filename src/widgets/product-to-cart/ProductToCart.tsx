@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import QuantityInput from "@/shared/quantity-input/QuantityInput";
-import { StyledButton, Wrapper } from "./ProductToCart.module";
+import { StyledButton, Wrapper } from "./ProductToCart.styled";
 
 interface ProductToCartInterface {
   price: number;

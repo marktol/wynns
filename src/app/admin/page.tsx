@@ -15,7 +15,7 @@ import { Box, Button, Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 import { SimpleTreeView } from "@mui/x-tree-view/SimpleTreeView";
 import { TreeItem } from "@mui/x-tree-view/TreeItem";
-import { StyledImage, StyledProduct } from "./page.module";
+import { StyledImage, StyledProduct } from "./page.styled";
 import EditIcon from "@mui/icons-material/Edit";
 import { useRouter } from "next/navigation";
 
