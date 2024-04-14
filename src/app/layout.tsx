@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
 import { PageWrapper } from "@/widgets/page-wrapper/PageWrapper";
+import { Comfortaa } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Comfortaa({ subsets: ["cyrillic"] });
 
 export const metadata: Metadata = {
   title: "WYNNS UA",
@@ -16,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={font.className}>
         <PageWrapper>{children}</PageWrapper>
       </body>
     </html>
