@@ -27,7 +27,11 @@ const Header = () => {
 
   return (
     <Wrapper>
-      <Logo onClick={navigateToHomePage} src="/wynns-logo.png" alt="" />
+      <Logo
+        onClick={navigateToHomePage}
+        src="https://wynns.kiev.ua/images/logos/1472/0wsl.jpg"
+        alt=""
+      />
       <Typography variant="h6">Каталог</Typography>
       <Search
         placeholder="Введите товар"

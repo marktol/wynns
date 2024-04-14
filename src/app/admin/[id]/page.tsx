@@ -7,7 +7,7 @@ import {
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { Category, Product } from "@/shared/types/types";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import MultipleSelectChip from "@/shared/select-categories/MultipleSelectChip";
 import {
   StyledInput,
@@ -89,58 +89,48 @@ const Page = () => {
     <div>
       {product && categoryName && (
         <Wrapper onSubmit={onSubmit}>
-          <h2>{product.name}</h2>
-          <StyledInput>
-            <StyledTextField
-              multiline
-              label="Название"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              variant="outlined"
-            />
-          </StyledInput>
-          <StyledInput>
-            <StyledTextField
-              multiline
-              label="Цена"
-              value={price}
-              onChange={(e) => setPrice(e.target.value)}
-              variant="outlined"
-            />
-          </StyledInput>
-          <StyledInput>
-            <StyledTextField
-              multiline
-              label="Наличие"
-              value={availability}
-              onChange={(e) => setAvailability(e.target.value)}
-              variant="outlined"
-            />
-          </StyledInput>
-          <StyledInput>
-            <StyledTextField
-              multiline
-              label="Модель"
-              value={model}
-              onChange={(e) => setModel(e.target.value)}
-              variant="outlined"
-            />
-          </StyledInput>
+          <Typography variant="h6">{product.name}</Typography>
+          <StyledTextField
+            multiline
+            label="Название"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            variant="outlined"
+          />
+          <StyledTextField
+            multiline
+            label="Цена"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+            variant="outlined"
+          />
+          <StyledTextField
+            multiline
+            label="Наличие"
+            value={availability}
+            onChange={(e) => setAvailability(e.target.value)}
+            variant="outlined"
+          />
+          <StyledTextField
+            multiline
+            label="Модель"
+            value={model}
+            onChange={(e) => setModel(e.target.value)}
+            variant="outlined"
+          />
           <MultipleSelectChip
             names={allCategories.map((d) => d.name)}
             categoryName={categoryName}
             setCategoryName={setCategoryName}
           />
-          <h4>{product.image}</h4>
+          <Typography>{product.image}</Typography>
           <StyledTextArea
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
-          <div>
-            <Button type="submit" variant="outlined">
-              Сохранить
-            </Button>
-          </div>
+          <Button type="submit" variant="outlined">
+            Сохранить
+          </Button>
         </Wrapper>
       )}
     </div>

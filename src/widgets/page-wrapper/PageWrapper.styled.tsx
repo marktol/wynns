@@ -1,11 +1,23 @@
-import styled from "styled-components";
+import { styled } from "@mui/material";
 
 export const Content = styled("div")(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
-  width: "80%",
   margin: "auto",
   marginTop: 10,
+
+  [theme.breakpoints.up("xs")]: {
+    width: "100%",
+  },
+  [theme.breakpoints.up("sm")]: {
+    width: "90%",
+  },
+  [theme.breakpoints.up("md")]: {
+    width: "80%",
+  },
+  [theme.breakpoints.up("lg")]: {
+    width: "70%",
+  },
 }));

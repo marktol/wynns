@@ -57,7 +57,7 @@ export default function MultipleSelectChip({
 
   return (
     <div>
-      <FormControl sx={{ width: 600 }}>
+      <FormControl>
         <InputLabel id="multiple-chip-label">Категории</InputLabel>
         <Select
           key={selectKey} // Unique key
