@@ -3,6 +3,7 @@
 import {
   getCollectionAndDocuments,
   getDocumentById,
+  uploadImageData,
 } from "@/utils/firebase/firebase.utils";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -31,6 +32,8 @@ const Page = () => {
   const [categoryName, setCategoryName] = React.useState<
     (string | undefined)[]
   >([]);
+  const [imageSelected, setImageSelected] = useState<any | null>(null);
+  const [imageUrl, setImageUrl] = useState<string>();
 
   const { id } = useParams();
 
@@ -72,13 +75,19 @@ const Page = () => {
     }
   }, [product, subCategories]);
 
+  const uploadImage = async () => {
+    if (imageSelected == null) return;
+    const url = await uploadImageData(imageSelected);
+    setImageUrl(url);
+  };
+
   const onSubmit = () => {
     const updatedProduct = {
       availability: availability,
       categories: categories,
       description: description,
       id: product?.id,
-      image: product?.image,
+      image: imageUrl,
       model: model,
       name: name,
       price: price,
@@ -118,6 +127,16 @@ const Page = () => {
             onChange={(e) => setModel(e.target.value)}
             variant="outlined"
           />
+          <input
+            type="file"
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+              setImageSelected(event.target.files?.[0] ?? null);
+            }}
+          />
+          <Button variant="outlined" onClick={uploadImage}>
+            Загрузить файл
+          </Button>
+
           <MultipleSelectChip
             names={allCategories.map((d) => d.name)}
             categoryName={categoryName}

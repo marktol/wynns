@@ -15,6 +15,7 @@ import {
   query,
   writeBatch,
 } from "firebase/firestore";
+import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -30,6 +31,18 @@ initializeApp(firebaseConfig);
 export const auth = getAuth();
 
 export const db = getFirestore();
+
+export const storage = getStorage();
+
+export const uploadImageData = async (img: any) => {
+  const imageRef = ref(storage, `assets/${img.name}`);
+  await uploadBytes(imageRef, img);
+
+  const downloadURLPromise = getDownloadURL(imageRef);
+  const downloadURL = await downloadURLPromise;
+
+  return downloadURL;
+};
 
 export const signInAuthUserWithEmailAndPassword = async (
   email: string,
