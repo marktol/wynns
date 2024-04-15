@@ -79,6 +79,7 @@ const Page = () => {
     if (imageSelected == null) return;
     const url = await uploadImageData(imageSelected);
     setImageUrl(url);
+    if (url) alert("Картинка загружена");
   };
 
   const onSubmit = () => {
