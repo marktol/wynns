@@ -4,6 +4,7 @@ import { signInAuthUserWithEmailAndPassword } from "@/utils/firebase/firebase.ut
 import { Box, Button, TextField } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, FormEvent, useState } from "react";
+import useNotification from "@/hooks/useNotification";
 
 interface LoginForm {
   email: string;
@@ -18,6 +19,7 @@ const defaultForm: LoginForm = {
 const Page = () => {
   const [form, setForm] = useState(defaultForm);
   const router = useRouter();
+  const { enqueueNotification } = useNotification();
 
   const { email, password } = form;
 
@@ -32,10 +34,11 @@ const Page = () => {
 
       if (response) {
         router.push("/admin");
-        alert("logged in");
+        enqueueNotification("Вхід до системи виконано", "success");
       }
     } catch (e: any) {
-      alert("error");
+      enqueueNotification("Помилка входу в систему", "error");
+
       console.log(e);
     }
   };

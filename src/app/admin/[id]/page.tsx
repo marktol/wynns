@@ -16,6 +16,7 @@ import {
   StyledTextField,
   Wrapper,
 } from "./page.styled";
+import useNotification from "@/hooks/useNotification";
 
 const Page = () => {
   const [product, setProduct] = useState<Product>();
@@ -36,6 +37,7 @@ const Page = () => {
   const [imageUrl, setImageUrl] = useState<string>();
 
   const { id } = useParams();
+  const { enqueueNotification } = useNotification();
 
   useEffect(() => {
     getDocumentById("products", String(id)).then((el) => {
@@ -79,7 +81,9 @@ const Page = () => {
     if (imageSelected == null) return;
     const url = await uploadImageData(imageSelected);
     setImageUrl(url);
-    if (url) alert("Картинка загружена");
+    if (url) {
+      enqueueNotification("Картинка завантажена", "success");
+    }
   };
 
   const onSubmit = () => {
