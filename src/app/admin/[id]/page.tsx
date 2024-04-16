@@ -10,12 +10,7 @@ import React, { useEffect, useState } from "react";
 import { Category, Product } from "@/shared/types/types";
 import { Button, Typography } from "@mui/material";
 import MultipleSelectChip from "@/shared/select-categories/MultipleSelectChip";
-import {
-  StyledInput,
-  StyledTextArea,
-  StyledTextField,
-  Wrapper,
-} from "./page.styled";
+import { StyledTextArea, StyledTextField, Wrapper } from "./page.styled";
 
 const Page = () => {
   const [product, setProduct] = useState<Product>();

@@ -24,11 +24,16 @@ const Header = () => {
   const navigateToHomePage = () => {
     router.push("/");
   };
+  const navigateToCatalogPage = () => {
+    router.push("/catalog");
+  };
 
   return (
     <Wrapper>
       <Logo onClick={navigateToHomePage} src="/wynns-logo.jpeg" alt="" />
-      <Typography variant="h6">Каталог</Typography>
+      <Typography variant="h6" onClick={navigateToCatalogPage}>
+        Каталог
+      </Typography>
       <Search
         placeholder="Введите товар"
         value={search}
