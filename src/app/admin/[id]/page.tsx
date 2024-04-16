@@ -8,9 +8,9 @@ import {
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { Category, Product } from "@/shared/types/types";
-import { Button, Typography } from "@mui/material";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import MultipleSelectChip from "@/shared/select-categories/MultipleSelectChip";
-import { StyledTextArea, StyledTextField, Wrapper } from "./page.styled";
+import { FileInput, Img, StyledTextArea, Wrapper } from "./page.styled";
 import useNotification from "@/hooks/useNotification";
 
 const Page = () => {
@@ -99,55 +99,58 @@ const Page = () => {
       {product && categoryName && (
         <Wrapper onSubmit={onSubmit}>
           <Typography variant="h6">{product.name}</Typography>
-          <StyledTextField
+          <TextField
             multiline
             label="Название"
             value={name}
             onChange={(e) => setName(e.target.value)}
             variant="outlined"
           />
-          <StyledTextField
+          <TextField
             multiline
             label="Цена"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             variant="outlined"
           />
-          <StyledTextField
+          <TextField
             multiline
             label="Наличие"
             value={availability}
             onChange={(e) => setAvailability(e.target.value)}
             variant="outlined"
           />
-          <StyledTextField
+          <TextField
             multiline
             label="Модель"
             value={model}
             onChange={(e) => setModel(e.target.value)}
             variant="outlined"
           />
-          <input
-            type="file"
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-              setImageSelected(event.target.files?.[0] ?? null);
-            }}
-          />
-          <Button variant="outlined" onClick={uploadImage}>
-            Загрузить файл
-          </Button>
-
           <MultipleSelectChip
             names={allCategories.map((d) => d.name)}
             categoryName={categoryName}
             setCategoryName={setCategoryName}
           />
-          <Typography>{product.image}</Typography>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Img src={product.image} />
+            <FileInput
+              type="file"
+              onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                setImageSelected(event.target.files?.[0] ?? null);
+              }}
+            />
+            <Button variant="outlined" onClick={uploadImage}>
+              Загрузить файл
+            </Button>
+          </Box>
           <StyledTextArea
+            aria-label="Описание"
+            placeholder="Описание"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
-          <Button type="submit" variant="outlined">
+          <Button type="submit" variant="outlined" sx={{ mt: 8 }}>
             Сохранить
           </Button>
         </Wrapper>

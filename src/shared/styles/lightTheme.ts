@@ -9,7 +9,10 @@ const font = Comfortaa({ subsets: ["cyrillic"] });
 const lightTheme = createTheme({
   palette: {
     primary: {
-      main: grey[900],
+      dark: "#55555d",
+      main: "#77777f",
+      light: "#dedbda",
+      contrastText: "#44444c",
     },
   },
   typography: {

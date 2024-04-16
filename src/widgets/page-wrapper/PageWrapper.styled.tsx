@@ -21,3 +21,7 @@ export const Content = styled("div")(({ theme }) => ({
     width: "70%",
   },
 }));
+
+export const Wrapper = styled("div")(({ theme }) => ({
+  color: theme.palette.primary.contrastText,
+}));
