@@ -6,12 +6,15 @@ import Header from "../header/Header";
 import { Content } from "./PageWrapper.styled";
 import lightTheme from "@/shared/styles/lightTheme";
 import { ThemeProvider } from "@mui/material";
+import { SnackbarProvider } from "notistack";
 
 const PageWrapper: FC<PropsWithChildren> = ({ children }): ReactElement => (
   <AuthProvider>
     <ThemeProvider theme={lightTheme}>
-      <Header />
-      <Content>{children}</Content>
+      <SnackbarProvider maxSnack={3}>
+        <Header />
+        <Content>{children}</Content>
+      </SnackbarProvider>
     </ThemeProvider>
   </AuthProvider>
 );
