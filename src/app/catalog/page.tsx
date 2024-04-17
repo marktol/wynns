@@ -13,6 +13,7 @@ import { SimpleTreeView } from "@mui/x-tree-view/SimpleTreeView";
 import { TreeItem } from "@mui/x-tree-view/TreeItem";
 import { StyledImage, StyledProduct } from "./page.styled";
 import PriceFilter from "@/shared/price-filter/PriceFilter";
+import { useSearchParams } from "next/navigation";
 
 const Catalog = () => {
   const [selectedCategories, setSelectedCategories] = useState<Number[]>([]);
@@ -22,6 +23,13 @@ const Catalog = () => {
     []
   );
   const [value, setValue] = useState<number[]>([0, 1000]);
+
+  const searchParams = useSearchParams();
+  const id = searchParams.get("id");
+
+  useEffect(() => {
+    setSelectedCategories([id ? parseInt(id) : 0]);
+  }, [id]);
 
   useEffect(() => {
     getCollectionAndDocuments("categories").then((data) => {

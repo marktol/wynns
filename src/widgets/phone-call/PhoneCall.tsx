@@ -17,9 +17,7 @@ import CallIcon from "@mui/icons-material/Call";
 const PhoneCall = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
-    null
-  );
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
   const phoneCallNumber = "+380(97)860-73-17";
   const open = Boolean(anchorEl);

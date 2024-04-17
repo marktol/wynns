@@ -9,6 +9,7 @@ import PhoneCall from "../phone-call/PhoneCall";
 import { Typography } from "@mui/material";
 import { Search } from "./Header.styled";
 import SearchIcon from "@mui/icons-material/Search";
+import CategoryPicker from "../category-picker/CategoryPicker";
 
 const Header = () => {
   const [search, setSearch] = useState("");
@@ -31,6 +32,7 @@ const Header = () => {
   return (
     <Wrapper>
       <Logo onClick={navigateToHomePage} src="/wynns-logo.jpeg" alt="" />
+      <CategoryPicker />
       <Typography variant="h6" onClick={navigateToCatalogPage}>
         Каталог
       </Typography>
