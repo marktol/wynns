@@ -11,7 +11,7 @@ import {
   doc,
   getDoc,
   getDocs,
-  getFirestore,
+  initializeFirestore,
   query,
   writeBatch,
 } from "firebase/firestore";
@@ -26,11 +26,13 @@ const firebaseConfig = {
   appId: "1:831221351615:web:73dffb397da8844e44320a",
 };
 
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth();
 
-export const db = getFirestore();
+const db = initializeFirestore(app, {
+  experimentalForceLongPolling: true,
+});
 
 export const storage = getStorage();
 
